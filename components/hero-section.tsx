@@ -22,7 +22,7 @@ const slides = [
   },
   {
     title: "The Time Is Now. Create Your Future.",
-    subtitle: "Don't wait for the perfect moment—create it. November 21st, 2025.",
+    subtitle: "Don't wait for the perfect moment—create it. November 25th, 2025.",
     image: "/lagos-nigeria-skyline-modern-city-real-estate-deve.jpg",
   },
 ]
