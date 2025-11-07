@@ -1,12 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Autoplay, EffectFade } from "swiper/modules"
 import type { Swiper as SwiperType } from "swiper"
 import "swiper/css"
-import "swiper/css/navigation"
 import "swiper/css/effect-fade"
+import "swiper/css/navigation"
+import { Autoplay, EffectFade, Navigation } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
 
 const slides = [
   {
@@ -22,7 +22,7 @@ const slides = [
   },
   {
     title: "The Time Is Now. Create Your Future.",
-    subtitle: "Don't wait for the perfect moment—create it. November 14th, 2025.",
+    subtitle: "Don't wait for the perfect moment—create it. November 21st, 2025.",
     image: "/lagos-nigeria-skyline-modern-city-real-estate-deve.jpg",
   },
 ]

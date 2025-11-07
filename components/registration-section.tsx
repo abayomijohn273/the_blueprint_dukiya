@@ -64,7 +64,7 @@ const RegistrationSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-xl mb-1">Date</h3>
-                <p className="text-gray-600">November 14th, 2025</p>
+                <p className="text-gray-600">November 21st, 2025</p>
               </div>
             </div>
 
