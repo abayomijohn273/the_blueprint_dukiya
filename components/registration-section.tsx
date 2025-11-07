@@ -1,12 +1,14 @@
 "use client"
 
-import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import { useRef, useState } from "react"
+import RegistrationModal from "./registration-modal"
 import SectionBadge from "./ui/section-badge"
 
 const RegistrationSection = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <section id="register" className="py-20 md:py-32 relative overflow-hidden" ref={ref}>
@@ -48,7 +50,7 @@ const RegistrationSection = () => {
           <div className="space-y-6 mb-8">
             <div className="flex items-start gap-4">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
                 style={{ backgroundColor: "#002278" }}
               >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +70,7 @@ const RegistrationSection = () => {
 
             <div className="flex items-start gap-4">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
                 style={{ backgroundColor: "#002278" }}
               >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,7 +102,7 @@ const RegistrationSection = () => {
 
             <div className="flex items-start gap-4">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
                 style={{ backgroundColor: "#EC712C" }}
               >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,6 +131,7 @@ const RegistrationSection = () => {
             <button
               className="w-full py-4 rounded-full text-lg font-bold text-white transition-all hover:scale-105"
               style={{ backgroundColor: "#002278" }}
+              onClick={() => setIsModalOpen(true)}
             >
               Register Now
             </button>
@@ -141,6 +144,8 @@ const RegistrationSection = () => {
           </div>
         </motion.div>
       </div>
+
+      <RegistrationModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </section>
   )
 }

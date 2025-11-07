@@ -5,7 +5,7 @@ import type { Swiper as SwiperType } from "swiper"
 import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/navigation"
-import { Autoplay, EffectFade, Navigation } from "swiper/modules"
+import { Autoplay, EffectFade, Navigation, Parallax } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 const slides = [
@@ -33,8 +33,9 @@ const HeroSliderSection = () => {
   return (
     <section className="relative h-144 md:h-184">
       <Swiper
-        modules={[Navigation, Autoplay, EffectFade]}
+        modules={[Navigation, Autoplay, EffectFade, Parallax]}
         effect="fade"
+        parallax={true}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
@@ -46,7 +47,7 @@ const HeroSliderSection = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-full w-full">
+            <div className="relative h-full w-full" data-swiper-parallax="-100">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
@@ -60,10 +61,10 @@ const HeroSliderSection = () => {
               <div className="relative h-full flex items-center pt-10 md:pt-20">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8">
                   <div className="max-w-3xl">
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4 text-balance leading-tight">
+                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4 text-balance leading-tight" data-swiper-parallax="-50">
                       {slide.title}
                     </h2>
-                    <p className="text-base md:text-lg text-white/90 text-pretty leading-relaxed">{slide.subtitle}</p>
+                    <p data-swiper-parallax="-70" className="text-base md:text-lg text-white/90 text-pretty leading-relaxed">{slide.subtitle}</p>
                   </div>
                 </div>
               </div>
