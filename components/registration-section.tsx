@@ -121,7 +121,7 @@ const RegistrationSection = () => {
                   <span className="font-bold text-2xl" style={{ color: "#EC712C" }}>
                     ₦200,000
                   </span>
-                  <span className="text-sm block mt-1">Early Bird (Valid till November 9th)</span>
+                  <span className="text-sm block mt-1">Early Bird (Valid till November 17th)</span>
                 </p>
               </div>
             </div>
